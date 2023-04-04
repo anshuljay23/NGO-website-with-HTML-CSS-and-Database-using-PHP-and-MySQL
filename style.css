@@ -1,0 +1,681 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,800;1,200;1,400;1,800;1,900&display=swap'); 
+
+:root {
+    --themeYellow: #FFD700;
+    --gray: #efefef;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+button,
+body {
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-size: 14px;
+    line-height: 26px;
+    text-align: left;
+}
+
+.fullContainer {
+    width: 100%;
+}
+
+.container {
+    width: 1140px;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.sectionTitle {
+    width: 300px;
+    border-bottom: 3px solid var(--themeYellow);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 200;
+    margin: 0 auto 50px;
+    position: relative;
+    text-transform: uppercase;    
+}
+
+section {
+    padding: 20px 0;
+    position: relative;
+
+}
+
+header {
+     width: 100%;
+     background-color: rgba(0, 0, 0, 0.6);
+     position: fixed;
+     z-index: 2;
+     height: 100px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+}  
+
+header .container .logo {
+    padding: 5px 0;
+    height: 75px;
+}
+
+header .container .logo img{
+     height: 110px;
+     width: 320px;
+     padding-right: 200px;
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    display: inline-block;
+    height: 75px;
+    line-height: 75px;
+    padding: 0 15px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: var(--themeYellow);
+}
+
+.banner {
+    height: 100%;
+    width: 100%;
+    background-image: url("banner2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.banner h1{
+    margin-top: 150px;
+    display: inline-block;
+    font-size: 3.5rem;
+    color: #000;
+    text-shadow: 0 0 2px #000 ;
+    width: 50%;
+    line-height: 4.2rem;
+    font-weight: 100;
+}
+
+.banner h1 span {
+    background-color: var(--themeYellow);
+    display: inline-block ;
+    line-height: 3.5rem;
+    padding: 0 15px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.banner p {
+    color: #000;
+    width: 50%;
+    margin-top: 10px;  
+}
+
+.banner button {
+    background-color: var(--themeYellow);
+    outline: none;
+    padding: 10px 10px;
+    margin-top: 20px;
+    font-size: 13px;
+    border-radius: 3px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.aboutSection{
+    background-color: rgb(207, 177, 138);
+    height: 900px;
+    opacity: 0.95;
+}
+
+#aboutSection .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    position: relative;
+    height: 245px;
+}
+
+#aboutSection .cards > div {
+    width: 250px;
+    background-color: var(--gray);
+    padding: 25px;
+    color: #444;
+    text-align: left;
+    border-radius: 5px;
+    height: 410px;
+    border: 1px solid #ccc;   
+    transition: 0.4s;
+}
+
+#aboutSection .cards > div:hover {
+    width: 300px;
+    margin-top: -20px;
+    border-color: var(--themeYellow);
+    border: 10;
+    padding: 55px;
+    height: auto;
+}
+
+#aboutSection .cards > div .title {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+
+#aboutSection .cards > div p {
+    font-size: 14px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+#aboutSection .cards > div button {
+    border: 2;
+    color: #000;
+    outline: none;
+    padding: 7px 15px;
+    margin-top: 15px;
+    font-size: 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+} 
+
+#aboutSection .cards > div:hover button {
+    background-color: var(--gray);
+    color: var(--themeYellow);
+}
+
+
+
+.programs {
+    background-color: rgb(119, 79, 45);
+    opacity: 0.95;
+}
+
+.programs .boxContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+}
+
+.programs .boxContainer .box {
+    background-color: #f6cf94;
+    text-align: center;
+    padding-bottom: 25px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 0 #c5c5c5;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.programs .boxContainer .box .cardImage {
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+.programs .boxContainer .box .cardImage:after {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-position: cover;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: grayscale(100%);
+    transition: 0.4s;
+}
+
+.programs .boxContainer .box:nth-child(1) .cardImage, 
+.programs .boxContainer .box:nth-child(1) .cardImage:after {
+    background-image: url("image1.jpg");
+}
+
+.programs .boxContainer .box:nth-child(2) .cardImage, 
+.programs .boxContainer .box:nth-child(2) .cardImage:after {
+    background-image: url("image2.jpg");
+}
+
+.programs .boxContainer .box:nth-child(3) .cardImage, 
+.programs .boxContainer .box:nth-child(3) .cardImage:after {
+    background-image: url("image3.jpg");
+}
+
+.programs .boxContainer .box:nth-child(4) .cardImage, 
+.programs .boxContainer .box:nth-child(4) .cardImage:after {
+    background-image: url("image4.jpg");
+}
+
+.programs .boxContainer .box:hover .cardImage:after {
+    top: 100%;
+}
+
+.programs .boxContainer .box .programTitle {
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #444;
+}
+
+.programs .boxContainer .box .donationCount {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.programs .boxContainer .box .donationCount span {
+    color: green;
+    font-weight: 700;
+}
+
+
+.adoption {
+    height: 650px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(143, 122, 94);
+}
+
+.adoption .videoPlayer {
+    width: 2000px;
+    height: 500px; 
+}
+
+.adoption .sectionTitle {
+    border-bottom: 3px solid var(--themeYellow);
+}
+
+.adoption .adoptionContainer {  
+    position: absolute;
+    background-color: #00000096;
+    width: 600px;
+    top: 35vh;
+    color: #fff;
+    text-shadow: 003px #000;
+    padding: 30px;
+}
+
+.adoption .adoptionContainer h3 {
+
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.adoption .adoptionContainer p {
+
+    font-size: 15px;
+    Line-height: 20px;
+    margin: 10px 0 30px;
+    color: #efefef;
+}
+
+.adoption .adoptionContainer button {
+    background-color: var(--themeYellow);
+    border: 0;
+    color: #000;
+    padding: 10px 25px;
+    font-weight: bold;
+    font-size: 14px;
+    outline: none;
+    border: 3;
+}
+
+
+
+.gallery {
+    background-color: rgb(209, 150, 101);
+    height: 660px;
+    opacity: 0.95;
+}
+
+.gallery .galleryContainer { 
+    column-count: 4;
+    column-gap: 20px;
+}
+
+.gallery .galleryContainer .item {
+    position: relative; 
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.gallery .galleryContainer img { 
+    width: 100%; 
+    display: block; 
+    transition: 0.4s;
+}
+
+.gallery .galleryContainer .title {
+    position: absolute;
+    background-color: var(--gray); 
+    padding: 5px; 
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.4s;
+}
+
+.gallery .galleryContainer .item:hover .title {
+    opacity: 1;
+}
+    
+.gallery .galleryContainer .item:hover img { 
+    transform: scale(1.2);
+}
+
+
+
+.join {
+    color: #000;
+}
+
+.join .joinTitle {
+    font-size: 40px; 
+    font-weight: 100;
+}
+
+.join .joinTitle span {
+    font-weight: 800;
+}
+
+.join button {
+    padding: 7px 15px; 
+    margin-top: 20px; 
+    border: 0; 
+    outline: none; 
+    font-weight: 600; 
+    font-size: 16px; 
+}
+
+.join button.joinNow {
+    margin-right: 10px; 
+    background-color: yellow; 
+    color: #fff;
+}
+
+
+
+footer {
+
+    background-color: rgb(189, 148, 122);
+    color: black;
+    font-size: 14px; 
+    opacity: 0.9;  
+}
+    
+footer .container {
+    display: grid;
+    grid-gap: 5%;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+footer .title {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 2px solid;
+    margin-bottom: 30px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .linksContainer ul {
+    list-style-type: none;
+}
+
+footer .linksContainer ul li a {
+    text-decoration: none;
+    color: #32022c;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-size: 15px;
+    text-transform: lowercase;
+    
+}
+
+footer .newsLetterContainer img {
+    height: 200px;
+    width: 250px;
+}
+
+footer .newsLetterContainer p {
+    font-weight: 600;
+    color: rgb(84, 39, 18);
+    font-size: 16px;
+}
+
+footer.newsLetterContainer input {
+    background-color: transparent; 
+    border: 1px solid #7f7f7f;
+    outline: none; 
+    width: 100%; 
+    margin-top: 10px;
+    color: #ccc;
+    border-radius: 30px;
+}
+
+footer .connectContainer .linksContainer .title {
+    font-weight: bolder;
+}
+
+footer .connectContainer p {
+    font-weight: 600;
+    color: rgb(84, 39, 18);
+}
+
+ 
+
+@media screen and (max-width: 1140px) { 
+    .container{
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .adoption .videoPlayer{
+        width: 1280px; 
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .banner h1 {
+        margin-top: 200px;
+    }
+    #aboutSection .cards { 
+        justify-content: space-around; 
+        height: auto;
+    
+    }
+    
+    #aboutSection .cards > div { 
+        margin: 10px 0;
+    }
+}
+    
+@media screen and (max-width: 1024px) {
+    .banner {
+        background-position-x: 45%;    
+    }
+
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+    
+    .programs .boxContainer { 
+        grid-template-columns: repeat (2, 1fr); 
+    }
+    
+}
+    
+@media screen and (max-width: 768px) {
+    header nav {
+    position: relative;
+    border: 2px solid;
+    height: 30px;
+    width: 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+    }
+
+    header nav:after {
+        top: 17px;
+    }
+        
+    header nav:before { 
+        top: 7px;  
+    }
+        
+    header nav:after,  
+    header nav:before {
+    content: "";
+    height: 2px;
+    width: 17px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    Left: 5px;
+    }
+
+    header nav ul {
+        position: absolute;
+        right: -400px; 
+        transition: 0.5s;
+        top: 53px;
+    }
+            
+    header nav:hover ul {
+        right: 0;
+    }
+            
+    header nav ul li { 
+        display: block;
+    }
+
+    header nav ul li a{
+        width: 300px; 
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .banner{
+        background-position-x: 65%;
+    }
+
+    .banner p{
+        font-size: 14px;
+    }
+
+    .banner p,
+    .banner h1{
+        width: 70%;
+    }
+
+    #aboutSection .cards > div:hover{
+        width: 350px;
+    }
+
+    .adoption .adoptionContainer { 
+        width: 96%;
+    }
+    
+    .adoption .adoptionContainer h3 {
+        font-size: 30px; 
+        Line-height: 35px;
+    }
+    
+    .adoption .adoptionContainer p {
+        margin: 10px 0 20px;
+    }
+    
+    .gallery .galleryContainer{
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width: 425px) { 
+    .banner h1 {
+        margin-top: 150px;
+        font-size: 2rem;
+        Line-height: 3rem;
+    }
+    .banner button { 
+        margin-bottom: 100;
+    }
+    
+    #aboutSection p{
+        text-align: justify;
+    }
+    
+    #aboutSection .cards > div:hover{
+        width: 400px;
+        margin-top: 10px;
+        padding: 35px;
+    }
+
+    .programs.boxContainer { 
+        grid-template-columns: 1fr; 
+    }
+
+    .adoption .videoPlayer { 
+        width: 1400px;
+    }
+
+    .adoption .adoptionContainer{
+        width: 93%;
+    }
+
+    .gallery .galleryContainer {
+        column-count: 1;
+    }
+
+    footer .container{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (max-width: 320px){
+    .adoption .adoptionContainer h3 {
+        font-size: 18px;
+        Line-height: 24px;
+    }
+    .banner h1{
+        margin-top: 100px;
+    }
+}
